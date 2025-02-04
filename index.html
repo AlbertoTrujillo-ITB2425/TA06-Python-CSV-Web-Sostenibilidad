@@ -1,15 +1,14 @@
-
 <!DOCTYPE html>
-<html lang="es">
+<html lang="ca">
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="icon" href="https://cdn-icons-png.flaticon.com/256/25/25231.png" type="image/x-icon">
-    <title>Resúmenes Estadísticos de Precipitación - Gráficos Interactivos y Datos CSV</title>
-    <meta name="description" content="Accede a resúmenes estadísticos detallados de precipitación con gráficos interactivos y descarga de datos en formato CSV para su análisis.">
-    <meta name="keywords" content="estadísticas, precipitación, gráficos interactivos, datos CSV, análisis de lluvia, cambio climático, meteorología">
-    <meta name="author" content="Alberto,Didac,JiaJun,Steven">
+    <title>Resums Estadístics de Precipitació - Gràfics Interactius i Dades CSV</title>
+    <meta name="description" content="Accedeix a resums estadístics detallats de precipitació amb gràfics interactius i descàrrega de dades en format CSV per a la seva anàlisi.">
+    <meta name="keywords" content="estadístiques, precipitació, gràfics interactius, dades CSV, anàlisi de pluja, canvi climàtic, meteorologia">
+    <meta name="author" content="Alberto, Didac, JiaJun, Steven">
     <link rel="stylesheet" href="styles.css">
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500&display=swap" rel="stylesheet">
@@ -18,117 +17,119 @@
     <script async src="https://www.google-analytics.com/analytics.js"></script>
 </head>
 
-
 <body>
 
-    <!-- Banner de cookies centrado -->
-    <div id="cookie-banner">
-        <div class="container">
-            <p class="mb-3">
-                Este sitio web utiliza cookies para mejorar la experiencia del usuario. Al continuar navegando, aceptas nuestra <a href="#politica-privacidad" class="text-white">política de privacidad</a> y el uso de cookies.
-            </p>
+    <!-- Banner de cookies centrat -->
+    <div id="cookie-banner" class="bg-dark text-white">
+        <div class="container py-3">
+            <p class="mb-3">Aquest lloc web utilitza cookies per millorar l'experiència de l'usuari. En continuar navegant, accepts la nostra <a href="#politica-privacidad" class="text-white">política de privacitat</a> i l'ús de cookies.</p>
             <div>
-                <button id="accept-cookies" class="btn btn-dark btn-lg">Aceptar</button>
-                <button id="reject-cookies" class="btn btn-danger btn-lg ms-2">Rechazar</button>
+                <button id="accept-cookies" class="btn btn-success btn-lg">Acceptar</button>
+                <button id="reject-cookies" class="btn btn-danger btn-lg ms-2">Rebutjar</button>
             </div>
         </div>
     </div>
 
-    <!-- Header -->
+    <!-- Capçalera -->
     <header class="bg-primary text-white py-4">
         <div class="container d-flex justify-content-between align-items-center">
-            <h1 class="h3">Resúmenes Estadísticos de Precipitación</h1>
+            <h1 class="h3">Resums Estadístics de Precipitació</h1>
             <nav>
                 <ul class="list-unstyled d-flex m-0">
-                    <li class="mx-3"><a href="#grafico" class="text-white text-decoration-none">Gráficos</a></li>
-                    <li class="mx-3"><a href="#descarga" class="text-white text-decoration-none">Descarga</a></li>
-                    <li class="mx-3"><a href="#acerca" class="text-white text-decoration-none">Acerca de</a></li>
+                    <li class="mx-3"><a href="#grafico" class="text-white text-decoration-none">Gràfics</a></li>
+                    <li class="mx-3"><a href="#descarga" class="text-white text-decoration-none">Descarrega</a></li>
+                    <li class="mx-3"><a href="#acerca" class="text-white text-decoration-none">Sobre el Projecte</a></li>
                 </ul>
             </nav>
         </div>
     </header>
 
-    <!-- Main Content -->
+    <!-- Contingut Principal -->
     <main>
 
-        <!-- Sección Acerca de -->
+        <!-- Secció Sobre el Projecte -->
         <section id="acerca" class="container py-5">
-            <h2 class="text-center mb-4">Acerca del Proyecto</h2>
-            <p>Este proyecto tiene como objetivo mostrar resúmenes estadísticos relacionados con la precipitación anual. Los usuarios pueden interactuar con gráficos dinámicos para observar las tendencias de lluvia a lo largo del tiempo y descargar los datos completos en formato CSV para un análisis más detallado.</p>
+            <h2 class="text-center mb-4">Sobre el Projecte</h2>
+            <p>Aquest projecte té com a objectiu mostrar resums estadístics relacionats amb la precipitació anual. Els usuaris poden interactuar amb gràfics dinàmics per observar les tendències de pluja al llarg del temps i descarregar les dades completes en format CSV per a un anàlisi més detallat.</p>
         </section>
 
-        <section class="team-section">
-          <h2 class="text-center mb-4">Conoce a Nuestro Equipo</h2>
-
-          <div class="team d-flex justify-content-center gap-4">
-            <div class="team-member text-center">
-              <img src="https://avatars.githubusercontent.com/u/182852964?s=64&v=4" alt="Jiajun Ye" class="img-fluid rounded-circle shadow-sm">
-              <h3>Jiajun Ye</h3>
+        <!-- Secció Coneix el nostre equip -->
+        <section class="team-section py-5">
+            <h2 class="text-center mb-4">Coneix el Nostre Equip</h2>
+            <p class="text-center mb-5">Un grup d'estudiants apassionats de l'ASIX a l'ITB amb l'objectiu de crear solucions innovadores per l'anàlisi de les dades meteorològiques.</p>
+            <div class="team d-flex justify-content-center gap-4">
+                <div class="team-member text-center">
+                    <img src="https://avatars.githubusercontent.com/u/182852964?s=64&v=4" alt="Jiajun Ye" class="img-fluid rounded-circle shadow-sm">
+                    <h3>Jiajun Ye</h3>
+                </div>
+                <div class="team-member text-center">
+                    <img src="https://avatars.githubusercontent.com/u/166545167?s=64&v=4" alt="Alberto Trujillo" class="img-fluid rounded-circle shadow-sm">
+                    <h3>Alberto Trujillo</h3>
+                </div>
+                <div class="team-member text-center">
+                    <img src="https://avatars.githubusercontent.com/u/124141741?s=64&v=4" alt="Steven Zapata" class="img-fluid rounded-circle shadow-sm">
+                    <h3>Steven Zapata</h3>
+                </div>
+                <div class="team-member text-center">
+                    <img src="https://avatars.githubusercontent.com/u/185032069?s=64&v=4" alt="Didac Escoda" class="img-fluid rounded-circle shadow-sm">
+                    <h3>Didac Escoda</h3>
+                </div>
             </div>
-            <div class="team-member text-center">
-              <img src="https://avatars.githubusercontent.com/u/166545167?s=64&v=4" alt="Alberto Trujillo" class="img-fluid rounded-circle shadow-sm">
-              <h3>Alberto Trujillo</h3>
-            </div>
-            <div class="team-member text-center">
-              <img src="https://avatars.githubusercontent.com/u/124141741?s=64&v=4" alt="Steven Zapata" class="img-fluid rounded-circle shadow-sm">
-              <h3>Steven Zapata</h3>
-            </div>
-            <div class="team-member text-center">
-              <img src="https://avatars.githubusercontent.com/u/185032069?s=64&v=4" alt="Didac Escoda" class="img-fluid rounded-circle shadow-sm">
-              <h3>Didac Escoda</h3>
-            </div>
-          </div>
         </section>
 
-
-
-        <!-- Sección de Gráficos -->
-        <section id="grafico" class="section py-5 bg-light">
+        <!-- Secció de Gràfics -->
+        <section id="grafico" class="section py-5">
             <div class="container">
-                <div class="section-header text-center">
-                    <h2>Gráficos Interactivos</h2>
-                    <p>Visualiza la precipitación total y su variación anual en los siguientes gráficos interactivos.</p>
+                <div class="section-header text-center mb-5">
+                    <h2 class="display-4 text-primary">Gràfics Interactius</h2>
+                    <p class="text-center mb-5">Explora els gràfics sobre precipitació total i la seva variació anual a continuació.</p>
                 </div>
                 <div class="row justify-content-center">
-                    <div class="col-md-6 mb-4">
-                        <div id="graficoTotal" class="grafico">
-                            <canvas id="precipitationChart"></canvas>
+                    <div class="col-md-5 mb-4">
+                        <div class="grafico">
+                            <img src="grafic_total_precip.png" alt="Gràfic de Precipitació Total" class="img-fluid rounded shadow-sm">
+                        </div>
+                        <div class="text-center mt-2">
+                            <h5>Precipitació Total</h5>
                         </div>
                     </div>
-                    <div class="col-md-6 mb-4">
-                        <div id="graficoAnual" class="grafico">
-                            <canvas id="annualVariationChart"></canvas>
+                    <div class="col-md-5 mb-4">
+                        <div class="grafico">
+                            <img src="grafic_variacio_anual.png" alt="Gràfic de Variació Anual" class="img-fluid rounded shadow-sm">
+                        </div>
+                        <div class="text-center mt-2">
+                            <h5>Variació Anual</h5>
                         </div>
                     </div>
                 </div>
             </div>
         </section>
 
-        <!-- Sección Descarga de Datos -->
+        <!-- Secció Descàrrega de Dades -->
         <section id="descarga" class="section py-5">
             <div class="container text-center">
                 <div class="section-header mb-4">
-                    <h2>Descarga de Datos</h2>
-                    <p>Accede a los datos completos en formato CSV para su análisis y consulta detallada.</p>
+                    <h2>Descàrrega de Dades</h2>
+                    <p>Accedeix a les dades completes en format CSV per al seu anàlisi i consulta detallada.</p>
                 </div>
-                <a href="resumen_estadistico.csv" class="btn btn-lg btn-success" download>
-                    <i class="fas fa-download"></i> Descargar Resumen Estadístico (CSV)
+                <a href="resum_estadistic.csv" class="btn btn-lg btn-success" download>
+                    <i class="fas fa-download"></i> Descarregar Resum Estadístic (CSV)
                 </a>
             </div>
         </section>
 
     </main>
 
-    <!-- Footer -->
+    <!-- Peu de pàgina -->
     <footer class="bg-dark text-white py-3">
         <div class="container text-center">
-            <p>&copy; 2025 | Todos los derechos reservados</p>
+            <p>&copy; 2025 | Tots els drets reservats</p>
         </div>
     </footer>
 
-    <!-- Floating Action Buttons -->
+    <!-- Botons d'Acció Flotant -->
     <div class="fab-container">
-        <a href="#top" class="fab fab-up" title="Ir Arriba">
+        <a href="#top" class="fab fab-up" title="Anar a dalt">
             <i class="fas fa-arrow-up"></i>
         </a>
         <a href="mailto:jiajun.ye7e6@itb.cat" class="fab fab-contact" title="Contactar">
@@ -141,18 +142,6 @@
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
     <script src="scripts.js"></script>
-
-    <!-- Script para ocultar el banner de cookies -->
-    <script>
-        document.getElementById('accept-cookies').addEventListener('click', function () {
-            document.getElementById('cookie-banner').style.display = 'none';
-            document.body.style.overflow = 'auto'; // Desbloquear la página
-        });
-
-        document.getElementById('reject-cookies').addEventListener('click', function () {
-            alert("Debes aceptar las cookies para continuar navegando.");
-        });
-    </script>
 </body>
 
 </html>
