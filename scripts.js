@@ -1,4 +1,12 @@
-        document.addEventListener('DOMContentLoaded', function () {
+    const descargaLink = document.getElementById('descarga-link');
+    const megaUrl = 'https://mega.nz/file/YVoEzISR#U7vaA-1NKicXilXR5L9tTyc8Dn-nwwJ-tUq9ybblsZQ';
+
+    descargaLink.addEventListener('click', (event) => {
+        event.preventDefault(); // Evita que el enlace abra la página de Mega
+        window.location.href = megaUrl; // Redirige directamente a la URL de descarga
+    });
+
+document.addEventListener('DOMContentLoaded', function () {
             // Lazy load images
             const lazyImages = document.querySelectorAll('img.lazy');
             const imageObserver = new IntersectionObserver((entries, observer) => {
