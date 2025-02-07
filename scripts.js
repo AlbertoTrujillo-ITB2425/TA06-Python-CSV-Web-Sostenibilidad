@@ -1,47 +1,44 @@
 document.addEventListener('DOMContentLoaded', function () {
-            // Lazy load images
-            const lazyImages = document.querySelectorAll('img.lazy');
-            const imageObserver = new IntersectionObserver((entries, observer) => {
-                entries.forEach(entry => {
-                    if (entry.isIntersecting) {
-                        const img = entry.target;
-                        img.src = img.dataset.src;
-                        img.classList.remove('lazy');
-                        observer.unobserve(img);
-                    }
-                });
-            });
-
-            lazyImages.forEach(img => {
-                imageObserver.observe(img);
-            });
-
-            // Defer non-critical JavaScript
-            const scriptsToDefer = document.querySelectorAll('script[data-defer]');
-            scriptsToDefer.forEach(script => {
-                const src = script.getAttribute('data-src');
-                if (src) {
-                    const newScript = document.createElement('script');
-                    newScript.src = src;
-                    document.body.appendChild(newScript);
+    // Lazy load images
+    const lazyImages = document.querySelectorAll('img.lazy');
+    if (lazyImages.length > 0) {
+        const imageObserver = new IntersectionObserver((entries, observer) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    const img = entry.target;
+                    img.src = img.dataset.src;
+                    img.classList.remove('lazy');
+                    observer.unobserve(img);
                 }
             });
         });
 
-        // Función para aceptar cookies
-        document.getElementById('accept-cookies').addEventListener('click', function () {
-            document.getElementById('cookie-banner').style.display = 'none';
-            document.body.style.overflow = 'auto'; // Desbloquear la página
-        });
+        lazyImages.forEach(img => imageObserver.observe(img));
+    }
 
-        // Función para rechazar cookies
-        document.getElementById('reject-cookies').addEventListener('click', function () {
-            alert("Debes aceptar las cookies para continuar navegando.");
-        });
-    const descargaLink = document.getElementById('descarga-link');
-    const megaUrl = 'https://mega.nz/file/YVoEzISR#U7vaA-1NKicXilXR5L9tTyc8Dn-nwwJ-tUq9ybblsZQ';
-
-    descargaLink.addEventListener('click', (event) => {
-        event.preventDefault(); // Evita que el enlace abra la página de Mega
-        window.location.href = megaUrl; // Redirige directamente a la URL de descarga
+    // Defer non-critical JavaScript
+    document.querySelectorAll('script[data-defer]').forEach(script => {
+        const src = script.getAttribute('data-src');
+        if (src) {
+            const newScript = document.createElement('script');
+            newScript.src = src;
+            document.body.appendChild(newScript);
+        }
     });
+
+    // Gestión de cookies
+    document.getElementById('accept-cookies')?.addEventListener('click', () => {
+        document.getElementById('cookie-banner').style.display = 'none';
+        document.body.style.overflow = 'auto';
+    });
+
+    document.getElementById('reject-cookies')?.addEventListener('click', () => {
+        alert("Debes aceptar las cookies para continuar navegando.");
+    });
+
+    // Redirección de descarga
+    document.getElementById('descarga-link')?.addEventListener('click', event => {
+        event.preventDefault();
+        window.location.href = 'https://mega.nz/file/YVoEzISR#U7vaA-1NKicXilXR5L9tTyc8Dn-nwwJ-tUq9ybblsZQ';
+    });
+});
